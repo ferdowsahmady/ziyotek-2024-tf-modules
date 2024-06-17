@@ -1,5 +1,5 @@
-module "rds" {
-   source = "../MODULES/rds"
-    environment = "sbx"
+# module "rds" {
+#    source = "../MODULES/rds"
+#     environment = "sbx"
 
-} 
+# } 

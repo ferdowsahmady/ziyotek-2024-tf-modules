@@ -1,7 +1,14 @@
 module "vpc" {
-    source = "../MODULES/vpc"
-    environment = "sbx"
-    subnet_1_cidr = "10.10.10.0/24"
-    subnet_2_cidr = "10.10.20.0/24"
-    subnet_3_cidr = "10.10.30.0/24"
+  source      = "../MODULES/vpc"
+  environment = "sbx"
+
+  public_subnets_cidr = [
+    "192.168.10.0/24",
+    "192.168.20.0/24",
+  ]
+
+  private_subnets_cidr = [
+    "192.168.70.0/24",
+    "192.168.80.0/24",
+  ]
 }

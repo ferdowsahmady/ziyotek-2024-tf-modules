@@ -1,11 +1,9 @@
-module "ec2" {
-    source = "../MODULES/ec2"
+# module "ec2" {
+#   source = "../MODULES/ec2"
 
-    environment = "sbx"
-    instance_type = "t3.micro"
-
-    vpc_subnet_for_ec2 = module.vpc.public_subnet_1
-
-    vpc_security_group = [module.vpc.vpc_security_group_id]
-
-}
+#   environment        = "sbx"
+#   instance_type      = "t2.micro"
+#   subnet_id          = module.vpc.public_subnets
+#   key_name           = null
+#   vpc_security_group = [module.vpc.vpc_security_group_output]
+# }
