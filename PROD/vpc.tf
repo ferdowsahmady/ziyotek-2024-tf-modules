@@ -1,6 +1,6 @@
 module "vpc" {
     source = "../MODULES/vpc"
-    environment = "stg"
+    environment = "prod"
 
     public_subnets_cidr = [
         "192.168.50.0/24",

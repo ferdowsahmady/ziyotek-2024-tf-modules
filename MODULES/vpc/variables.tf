@@ -2,6 +2,13 @@ variable "environment" {
     nullable = false
 }
 
+variable "vpcs" {
+  default = [
+    "192.168.0.0/16",
+    "192.178.0.0/16",
+  ]
+}
+
 variable "public_subnets_cidr" {
     type    = list(string)
     default = []
@@ -28,13 +35,6 @@ variable "private_subnets_az" {
         "us-east-1e",
         "us-east-1f",        
     ]
-}
-
-variable "vpcs" {
-  default = [
-    "192.168.0.0/16",
-    "192.178.0.0/16",
-  ]
 }
 
 locals {

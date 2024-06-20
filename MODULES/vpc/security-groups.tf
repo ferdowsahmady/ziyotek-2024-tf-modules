@@ -4,6 +4,10 @@ resource "aws_security_group" "allow_all" {
   depends_on = [aws_vpc.my_vpc]
   vpc_id      = aws_vpc.my_vpc[0].id
 
+  tags = {
+    "Name" = "${var.environment}-allow_all" 
+  }
+
   ingress {
     description = "All from VPC"
     from_port   = 0

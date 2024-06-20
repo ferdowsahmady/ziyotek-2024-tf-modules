@@ -3,9 +3,9 @@ output "public_subnets" {
 }
 
 output "private_subnets" {
-    value = aws_subnet.private_subnets[1].id
-  
+    value = aws_subnet.private_subnets[1].id 
 }
+
 output "vpc_security_group_output" {
     value = aws_security_group.allow_all.id
 }

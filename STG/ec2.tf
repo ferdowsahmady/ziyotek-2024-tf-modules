@@ -5,6 +5,6 @@ module "ec2" {
   instance_type = "t2.micro"
   subnet_id = module.vpc.private_subnets
   key_name = null
-  vpc_security_group = null
+  vpc_security_group = [module.vpc.vpc_security_group_output]
 
 }
